@@ -250,16 +250,28 @@ body {
     padding: 4rem;
 }
 
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-imgBx-cover {
+    place-self: center;
+    background-color: #17191D;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
 .about-imgBx {
     position: relative;
     width: 250px;
     height: 300px;
-    place-self: center;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.about-me {
+    text-align: justify;
 }
 
 .personal-infos {
@@ -415,4 +427,142 @@ body {
 .contact-card i {
     font-size: 1.5rem;
     color: #E70036;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1350px) {
+    .work-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1.3);
+        height: calc(180px * 1.3);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .home {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        transform: translateX(-100%);
+        display: none;
+    }
+    .work-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1);
+        height: calc(180px * 1);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .work-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1.3);
+        height: calc(180px * 1.3);
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .home-content .name {
+        font-size: 2.2rem;
+    }
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 90%;
+    }
+    .home-content br {
+        display: none;
+    }
+    .home-image {
+        justify-self: right;
+        margin-bottom: 1rem;
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1.2);
+        height: calc(180px * 1.2);
+    }
+    .home-contacts {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .about-imgBx-cover {
+        display: none;
+    }
+    .home-container {
+        width: 100%;
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1);
+        height: calc(180px * 1);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+    .work-card-imgBx {
+        width: calc(250px * 1.5);
+        height: calc(180px * 1.5);
+    }
+    .qualification-container {
+        grid-template-columns: 1fr;
+    }
+    .experience,
+    .education {
+        justify-self: left;
+    }
+    .home-contacts {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .work-card-imgBx {
+        width: calc(250px * 1.2);
+        height: calc(180px * 1.2);
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .home,
+    .about,
+    .qualification,
+    .work,
+    .contact {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .work-card-imgBx {
+        width: calc(250px * 1);
+        height: calc(180px * 1);
+    }
+    .home-imgBx {
+        position: relative;
+        width: calc(300px * 0.8);
+        height: calc(400px * 0.8);
+    }
 }
