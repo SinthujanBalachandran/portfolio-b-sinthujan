@@ -161,11 +161,25 @@ body {
 
 /* home */
 
+.top-bar {
+    position: relative;
+}
+
+.menu {
+    color: #fff;
+    font-size: 2.5rem;
+    background-color: #E70036;
+    padding: .5rem;
+    display: none;
+    margin-bottom: 2rem;
+}
+
 .home {
     position: relative;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    padding: 4rem;
     min-height: 100vh;
 }
 
@@ -173,6 +187,8 @@ body {
     color: #fff;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    height: calc(100vh - 8rem);
+    align-content: center;
 }
 
 .home-content {
@@ -355,6 +371,34 @@ body {
 }
 
 
+/* services */
+
+.services {
+    padding: 4rem;
+    background-color: #0B0A0F;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #17191D;
+    padding: 3rem 2rem 1rem;
+    border-radius: 5px;
+}
+
+.service-card i {
+    color: #E70036;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
 /* work */
 
 .work {
@@ -404,6 +448,98 @@ body {
 }
 
 
+/* skills */
+
+.skills {
+    padding: 4rem;
+    background-color: #17191D;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.skill-set {
+    color: #fff;
+    background-color: #0B0A0F;
+    padding: 1rem;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.skill-category {
+    text-align: center;
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill-name span {
+    float: right;
+}
+
+.skill-progress-cover {
+    position: relative;
+    height: .4rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: #17191D;
+    border-radius: 5px;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #E70036;
+    border-radius: 5px;
+}
+
+.progress1 {
+    width: 60%;
+}
+
+.progress2 {
+    width: 65%;
+}
+
+.progress3 {
+    width: 45%;
+}
+
+.progress4 {
+    width: 80%;
+}
+
+.progress5 {
+    width: 75%;
+}
+
+.progress6 {
+    width: 55%;
+}
+
+.progress7 {
+    width: 50%;
+}
+
+.progress8 {
+    width: 70%;
+}
+
+.progress9 {
+    width: 60%;
+}
+
+.progress10 {
+    width: 45%;
+}
+
+
 /* contact */
 
 .contact {
@@ -450,6 +586,12 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+    .home {
+        height: calc(100vh - 13.5rem);
+    }
+    .menu {
+        display: none;
+    }
     .sidebar {
         transform: translateX(-100%);
         display: none;
@@ -497,6 +639,11 @@ body {
     .home-contacts {
         justify-self: center;
     }
+    .home-imgBx {
+        position: relative;
+        width: calc(300px * 0.8);
+        height: calc(400px * 0.8);
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -515,6 +662,15 @@ body {
     .work-card-imgBx {
         width: calc(250px * 1);
         height: calc(180px * 1);
+    }
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+    .skill-set {
+        padding: 2rem;
+    }
+    .service-container {
+        grid-template-columns: repeat(2, 230px);
     }
 }
 
@@ -538,6 +694,12 @@ body {
     }
 }
 
+@media screen and (max-width: 630px) {
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 565px) {
     .work-card-imgBx {
         width: calc(250px * 1.2);
@@ -550,8 +712,13 @@ body {
     .about,
     .qualification,
     .work,
-    .contact {
-        padding: 2rem;
+    .contact,
+    .services,
+    .skills {
+        padding: 4rem 2rem;
+    }
+    .about-me {
+        text-align: left;
     }
 }
 
@@ -560,9 +727,9 @@ body {
         width: calc(250px * 1);
         height: calc(180px * 1);
     }
-    .home-imgBx {
+    /* .home-imgBx {
         position: relative;
         width: calc(300px * 0.8);
         height: calc(400px * 0.8);
-    }
+    } */
 }
